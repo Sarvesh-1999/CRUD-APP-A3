@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../axios/axiosInstance";
+import toast from "react-hot-toast";
 
 const SignupPage = () => {
   const [username, setUsername] = useState("");
@@ -17,20 +18,19 @@ const SignupPage = () => {
       email.trim() === "" ||
       password.trim() === ""
     ) {
-      alert("All fields are required");
+      toast.error("All fields are required");
       return;
     }
 
     let newUser = { username, email, password };
 
     let res = await api.post("/users", newUser);
-    // console.log(res);
 
     if (res.status === 201) {
-      alert("Signup Success 🚀");
+      toast.success("Signup Success 🚀");
       navigate("/");
     } else {
-      alert("Signup Failed ❌");
+      toast.error("Signup Failed ❌");
     }
   };
 

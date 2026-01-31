@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../axios/axiosInstance";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -24,21 +25,19 @@ const LoginPage = () => {
       return user.email === email && user.password === password;
     });
 
-    if (user) {
-      return true;
-    }
-    return false;
+    return user;
   }
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    let isPresent = checkIsSignedUpUser();
+    let authUser = checkIsSignedUpUser();
 
-    if (isPresent) {
-      alert("Login Success 🚀");
+    if (authUser) {
+      toast.success("Login Success 🚀");
       sessionStorage.setItem("accessToken", Math.random());
+      navigate(`/dashboard/${authUser.id}`);
     } else {
-      alert("Login Failed ❌");
+      toast.error("Login Failed ❌");
     }
   };
 

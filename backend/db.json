@@ -1,22 +1,30 @@
 {
   "users": [
     {
-      "id": "b218",
-      "username": "John Doe",
-      "email": "john@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "e829",
-      "username": "Jane Doe",
-      "email": "jane@gmail.com",
-      "password": "123"
-    },
-    {
       "id": "7caa",
       "username": "James",
       "email": "james@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "f43b",
+      "username": "Raj",
+      "email": "raj@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "3c40",
+      "username": "Jane",
+      "email": "jane@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "5fb6",
+      "username": "xyz",
+      "email": "xyz@gmail.com",
+      "password": "123"
     }
-  ]
+  ],
+
+  "employees": []
 }
