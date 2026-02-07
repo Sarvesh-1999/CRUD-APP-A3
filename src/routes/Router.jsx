@@ -4,6 +4,9 @@ import LoginPage from "../pages/LoginPage";
 import Layout from "../pages/Layout";
 import Dashboard from "../pages/Dashboard";
 import PrivateRoute from "../private/PrivateRoute";
+import CreateEmployee from "../pages/CreateEmployee";
+import AllEmployees from "../pages/AllEmployees";
+import EditEmployee from "../pages/EditEmployee";
 
 export const myRoutes = createBrowserRouter([
   {
@@ -25,6 +28,18 @@ export const myRoutes = createBrowserRouter([
             <Dashboard />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/add-emp",
+        element: <CreateEmployee />,
+      },
+      {
+        path: "/all-emp",
+        element: <AllEmployees />,
+      },
+      {
+        path: "/edit-emp/:id", // dynamic route for id
+        element: <EditEmployee />,
       },
     ],
   },

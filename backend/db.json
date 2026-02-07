@@ -25,6 +25,16 @@
       "password": "123"
     }
   ],
-
-  "employees": []
+  "employees": [
+    {
+      "id": "61d6",
+      "firstname": "JOHN",
+      "lastname": "Doe",
+      "email": "john@gmail.com",
+      "empid": "TYP123",
+      "age": "25",
+      "salary": "700000",
+      "designation": "SDE"
+    }
+  ]
 }

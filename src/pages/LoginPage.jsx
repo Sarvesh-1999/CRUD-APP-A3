@@ -12,7 +12,6 @@ const LoginPage = () => {
 
   async function getAllSignupUsers() {
     let resp = await api.get("/users");
-    console.log(resp.data);
     setAllUsers(resp.data);
   }
 
